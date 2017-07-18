@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Farm Build Animal Density Calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+<content>
+    <h3>
+        Farmbuild Animal Density Calculator       
+    </h3>
+    <hr/>
+	 <p> Please create seasons and provide number of hours spent in paddocks: </p>  
+      <p><h4>Start Date: <input type="text" id="start_date"> End Date: <input type="text" id="end_date"> <button type="button" id="add_season" class="btn btn-primary" >Create Season</button>&nbsp;<button title="Creates new season">?</button></h4></p>
+ 
+    <hr/>
+	
+<div class="seasons">
+</div>
+
+               
+   <hr/>
+  
+   <h4>Press this button when finished data entry to view animal density data</h4>
+       
+            <button type="button" id = "calculateDensity" class="btn btn-primary">
+                Calculate Animal Density
+            </button>
+ <div id="density_data_div">    
+ </div>
+
+</content>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+ 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>  
+  
+  
+
+<script src="../../../dist/farmbuild-core.js"></script>
+<script src="../../../dist/farmbuild-farmdata.js"></script>
+<script src="../../../dist/farmbuild-nutrientcalculator.js"></script>
+<script src="../../config.js"></script>
+<script src="index.js"></script>
+
+
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	   
+        <h3 class="modal-title">Validation failed</h3>
+      </div>
+      <div class="modal-body" id="modalmsg">
+        There is a problem with input values.
+        Please see the console for the error log or
+        read <a
+              href="https://github.com/FarmBuild/farmbuild-dairy-nutrient-calculator">API documentation</a> for
+        more information
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</script>
+
+</body>
+</html>

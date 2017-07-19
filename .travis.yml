@@ -14,5 +14,5 @@ before_script:
 script:
   - npm -v
   - node -v
-  - karma start --no-auto-watch --single-run --reporters=dots --browsers=Firefox
+  - karma start karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox
   
